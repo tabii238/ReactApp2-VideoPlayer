@@ -3,8 +3,10 @@ import React from 'react';
 export class Menu extends React.Component {
     constructor(props) {
       super(props)
-      this.handleClick = this.handleClick.bind(this);
+      this.handleClick = this.handleClick.bind(this); //binding to Menu since it is called from <form>
     }
+  //handleClick is an event handler "middleman" function that will call chooseVideo
+  //with an object ("text") that extracts the value of one of the inputs
   handleClick(e) {
       var text = e.target.value;
       this.props.chooseVideo(text);
