@@ -13,8 +13,8 @@ const VIDEOS = {
 // App passes down this.state.src to Video. Video uses this info to display the chosen video. 
 // App also passes down this.state.src to Menu and menu uses this ability to let a user select a new video. 
 export class App extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor(props) { //create a constructor that takes in props, 
+    super(props); //pass props to super (thus copying a default react component's constructor, since it's going to be replaced with our own)
     this.chooseVideo = this.chooseVideo.bind(this);
 
     this.state = { src: VIDEOS.fast };
@@ -24,6 +24,7 @@ export class App extends React.Component {
         src: VIDEOS[newVideo]
       });
    }
+   
 //passing src as a prop to video and the chooseVideo function as a prop to menu
   render() {
     return (
