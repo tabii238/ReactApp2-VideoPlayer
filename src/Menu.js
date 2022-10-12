@@ -5,8 +5,8 @@ export class Menu extends React.Component {
       super(props)
       this.handleClick = this.handleClick.bind(this); //binding to Menu since it is called from <form>
     }
-  //handleClick is an event handler "middleman" function that will call chooseVideo
-  //with an object ("text") that extracts the value of one of the inputs
+
+  //handleClick is an event handler function that will call chooseVideo with an object ("text") that extracts the value of one of the inputs
   handleClick(e) {
       var text = e.target.value;
       this.props.chooseVideo(text);
